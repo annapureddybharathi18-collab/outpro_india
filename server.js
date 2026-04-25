@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // ================= MONGODB CONNECTION =================
-const MONGO_URI = "mongodb+srv://annapureddybharathi18_db_user:B1h2a3r4a5t6h7i8@cluster0.gunt8s0.mongodb.net/outpro";
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://annapureddybharathi18_db_user:B1h2a3r4a5t6h7i8@cluster0.gunt8s0.mongodb.net/outpro";
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log("MongoDB Connected ✅"))
